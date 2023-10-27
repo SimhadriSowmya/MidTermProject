@@ -1,0 +1,94 @@
+{
+	"info": {
+		"_postman_id": "ba02fd94-140c-48a3-98cd-34914d923638",
+		"name": "SS_WebServices_MidTerm",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "5040594"
+	},
+	"item": [
+		{
+			"name": "getOrderStatus-400",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"orderNum\" : \"1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/getOrderStatus"
+			},
+			"response": []
+		},
+		{
+			"name": "getOrderStatus-200",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"orderNum\" : \"900000000001\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/getOrderStatus"
+			},
+			"response": []
+		},
+		{
+			"name": "CreateTracking",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Tracking-Api-Key",
+						"value": "dhtbxknb-b9lb-yd0w-d60i-4fwpipcingpf",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"tracking_number\": \"989898989898\",\r\n    \"courier_code\": \"cainiao\"\r\n    \"order_number\": \"#1234\",\r\n    \"destination_code\": \"LV\",\r\n    \"logistics_channel\": \"4px channel\",\r\n    \"customer_name\": \"test\",\r\n    \"customer_email\": \"example@abc.com\",\r\n    \"customer_phone\": \"+1123456789\",\r\n    \"note\": \"check\",\r\n    \"title\": \"title\",\r\n    \"lang\": \"en\"\r\n\r\n\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://api.trackingmore.com/v4/trackings/create"
+			},
+			"response": []
+		},
+		{
+			"name": "ModifyTracking",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Tracking-Api-Key",
+						"value": "dhtbxknb-b9lb-yd0w-d60i-4fwpipcingpf",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"tracking_number\": \"989898989898\",\r\n    \"courier_code\": \"cainiao\"\r\n    \"order_number\": \"#1234\",\r\n    \"destination_code\": \"LV\",\r\n    \"logistics_channel\": \"4px channel\",\r\n    \"customer_name\": \"test\",\r\n    \"customer_email\": \"example@abc.com\",\r\n    \"customer_phone\": \"+1123456789\",\r\n    \"note\": \"check\",\r\n    \"title\": \"title\",\r\n    \"lang\": \"en\"\r\n\r\n\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://api.trackingmore.com/v4/trackings/create"
+			},
+			"response": []
+		}
+	]
+}
